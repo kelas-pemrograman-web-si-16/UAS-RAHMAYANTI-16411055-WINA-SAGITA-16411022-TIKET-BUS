@@ -1,0 +1,56 @@
+include  ../../users/dashboard
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Pemesanan Tiket
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Pemesanan Tiket
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="POST", action='/'+pemesanans._id + '/editpesan')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kode_pesan') Kode Pemesanan
+                                        .col-sm-10
+                                            input#kode_pesan.form-control(type='text' name="kode_pesan" placeholder='Kode Pemesanan' value= (kode_pesan == undefined) ? pemesanans.kode_pesan : kode_pesan)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='asal') Asal
+                                        .col-sm-10
+                                            input#asal.form-control(type='text' name="asal" placeholder='Asal' value= (asal == undefined) ? pemesanans.asal: asal)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='tujuan') Tujuan
+                                        .col-sm-10
+                                            input#tujuan.form-control(type='text' name="tujuan" placeholder='Tujuan' value= (tujuan == undefined) ? pemesanans.tujuan: tujuan)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='tanggal_berangkat') Tanggal Berangkat
+                                        .col-sm-10
+                                            input#tanggal_berangkat.form-control(type='text' required name="tanggal_berangkat" placeholder='Tanggal Berangkat' value= (tanggal_berangkat == undefined) ? pemesanans.tanggal_berangkat: tanggal_berangkat)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kursi') Jumlah Kursi
+                                        .col-sm-10
+                                            input#kursi.form-control(type='text' name="kursi" placeholder='Jumlah Kursi' value= (kursi == undefined) ? pemesanans.kursi: kursi)
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer

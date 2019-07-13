@@ -1,0 +1,60 @@
+include  ../../users/dashboard
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Tiket
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Tiket
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="POST", action='/'+tikets._id + '/edittiket')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodetiket') Kode Tiket
+                                        .col-sm-10
+                                            input#kodetiket.form-control(type='text' required name="kodetiket" placeholder='Kode Tiket' value= (kodetiket == undefined) ? tikets.kodetiket: kodetiket)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='asal') Asal
+                                        .col-sm-10
+                                            input#asal.form-control(type='text' name="asal" placeholder='Asal' value= (asal == undefined) ? tikets.asal: asal)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='tujuan') Tujuan
+                                        .col-sm-10
+                                            input#tujuan.form-control(type='text' name="tujuan" placeholder='Tujuan' value= (tujuan == undefined) ? tikets.tujuan: tujuan)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='waktu_berangkat') Waktu Berangkat
+                                        .col-sm-10
+                                            input#waktu_berangkat.form-control(type='text' required name="waktu_berangkat" placeholder='Waktu Berangkat' value= (waktu_berangkat == undefined) ? tikets.waktu_berangkat: waktu_berangkat)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='waktu_tiba') Waktu Berangkat
+                                        .col-sm-10
+                                            input#waktu_tiba.form-control(type='text' required name="waktu_tiba" placeholder='Waktu Tiba' value= (waktu_tiba == undefined) ? tikets.waktu_tiba: waktu_tiba)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='harga') Harga
+                                        .col-sm-10
+                                            input#harga.form-control(type='text' name="harga" placeholder='Harga' value= (harga == undefined) ? tikets.harga: harga)
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer

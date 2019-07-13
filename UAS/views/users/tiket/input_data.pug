@@ -1,0 +1,61 @@
+include  ../../users/dashboard
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Tiket
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Tiket
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputtiket", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodetiket') Kode Tiket
+                                        .col-sm-10
+                                            input#kodetiket.form-control(type='text' required name="kodetiket" placeholder='Kode Tiket')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='asal') Asal
+                                        .col-sm-10
+                                            input#asal.form-control(type='text' required name="asal" placeholder='Asal')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='tujuan') Tujuan
+                                        .col-sm-10
+                                            input#tujuan.form-control(type='text' required name="tujuan" placeholder='Tujuan')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='waktu_berangkat') Waktu Berangkat
+                                        .col-sm-10
+                                            input#waktu_berangkat.form-control(type='text' required name="waktu_berangkat" placeholder='Waktu Berangkat')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='waktu_tiba') Waktu Tiba
+                                        .col-sm-10
+                                            input#waktu_tiba.form-control(type='text' required name="waktu_tiba" placeholder='Waktu Tiba')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='harga') Harga
+                                        .col-sm-10
+                                            input#harga.form-control(type='text' required name="harga" placeholder='Harga')
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
+

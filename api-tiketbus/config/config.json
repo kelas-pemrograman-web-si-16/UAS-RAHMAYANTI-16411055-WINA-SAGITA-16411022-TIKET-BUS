@@ -1,0 +1,11 @@
+{
+  "name" : "Rahmayanti & Wina Sagita",
+  "email" : "rahma.16411055@student.ubl.ac.id",
+  "password" : "rahasia",
+  "secret" : "rahasia",
+  "database": {
+    "development": {
+      "uri": "mongodb://localhost:27017/tiketbus"
+    }
+  }
+}

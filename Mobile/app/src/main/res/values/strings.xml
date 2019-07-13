@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Bus !!!</string>
+    <string name="pp">Bus !!!</string>
+    <string-array name="nama_terminal">
+        <item>Rajabasa</item>
+        <item>Kalianda</item>
+        <item>Muaradua</item>
+        <item>Palembang</item>
+        <item>Kotabumi</item>
+        <item>Baturaja</item>
+    </string-array>
+    <string-array name="penumpang">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="list_tiket">
+        <item>Data 1</item>
+        <item>Data 2</item>
+        <item>Data 3</item>
+        <item>Data 4</item>
+    </string-array>
+</resources>

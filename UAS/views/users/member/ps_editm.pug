@@ -1,0 +1,51 @@
+include  ../dashboard
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Tiket
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="POST", action='/'+users._id + '/edituser')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nama_lengkap') Nama Lengkap
+                                        .col-sm-10
+                                            input#nama_lengkap.form-control(type='text' required name="nama_lengkap" placeholder='Nama Lengkap' value= (nama_lengkap == undefined) ? users.nama_lengkap: nama_lengkap)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='tlpn') No. Telepon
+                                        .col-sm-10
+                                            input#tlpn.form-control(type='text' name="tlpn" placeholder='No. Telepon' value= (tlpn == undefined) ? users.tlpn: tlpn)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='username') Username
+                                        .col-sm-10
+                                            input#username.form-control(type='text' name="username" placeholder='Username' value= (username == undefined) ? users.username: username)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='email') Email
+                                        .col-sm-10
+                                            input#email.form-control(type='text' required name="email" placeholder='Email' value= (email == undefined) ? users.email: email)
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Submit
+                                // /.box-footer
